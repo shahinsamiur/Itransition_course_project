@@ -6,10 +6,10 @@ import { xss } from "express-xss-sanitizer";
 
 import errorHandler from "./shared/errors/errorHandler";
 import authRoutes from "./modules/auth/authRoutes";
-import userRoutes from "./modules/users/userRoutes";
-import inventoryRoutes from "./modules/inventories/inventoriesRoutes";
-import fieldRoutes from "./modules/Fields/fieldsRoutes";
-import itemRoutes from "./modules/Items/itemsRoutes";
+// import userRoutes from "./modules/user/userRoutes";
+// import inventoryRoutes from "./modules/inventories/inventoriesRoutes";
+// import fieldRoutes from "./modules/Fields/fieldsRoutes";
+// import itemRoutes from "./modules/Items/itemsRoutes";
 const app: Application = express();
 
 app.use(
@@ -38,10 +38,10 @@ app.get("/", (req: Request, res: Response) => {
 });
 
 app.use("/api/auth", authRoutes);
-app.use("/api/users", userRoutes);
-app.use("/api/inventories", inventoryRoutes);
-app.use("/api/fields", fieldRoutes);
-app.use("/api/items", itemRoutes);
+// app.use("/api/users", userRoutes);
+// app.use("/api/inventories", inventoryRoutes);
+// app.use("/api/fields", fieldRoutes);
+// app.use("/api/items", itemRoutes);
 
 app.use(errorHandler);
 
