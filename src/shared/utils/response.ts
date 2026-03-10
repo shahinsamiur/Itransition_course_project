@@ -8,9 +8,9 @@ const sendResponse = <T = any>(
   data: T | null = null,
 ): Response => {
   return res.status(status).json({
-    success,
-    message,
-    data,
+    success: success,
+    message: message,
+    data: data,
   });
 };
 

@@ -1,6 +1,14 @@
-interface JwtPayload {
+export interface JwtPayload {
   id: number;
   role: string;
 }
+export interface RegisterDTO {
+  name: string;
+  email: string;
+  password: string;
+}
 
-export { JwtPayload };
+export interface LoginDTO {
+  email: string;
+  password: string;
+}
