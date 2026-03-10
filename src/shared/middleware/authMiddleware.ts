@@ -27,7 +27,7 @@ const authMiddleware = async (
     ) as DecodedToken;
 
     const users =
-      await sql`SELECT id, name, email, role FROM users WHERE id = ${decoded.id}`;
+      await sql`SELECT id, name, email FROM users WHERE id = ${decoded.id}`;
 
     if (users.length === 0) {
       return next(new AppError("User not found", 404));
@@ -37,6 +37,7 @@ const authMiddleware = async (
 
     next();
   } catch (err) {
+    console.log(err);
     return next(new AppError("Invalid or expired token", 401));
   }
 };

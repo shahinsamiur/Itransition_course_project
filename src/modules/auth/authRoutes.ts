@@ -9,17 +9,5 @@ router.post("/signup", validate(registerSchema), authController.register);
 
 router.post("/signin", validate(loginSchema), authController.login);
 
-router.post(
-  "/signout",
-  authMiddleware,
-  validate(registerSchema),
-  authController.register,
-);
-
-router.get(
-  "/me",
-  authMiddleware,
-  validate(registerSchema),
-  authController.register,
-);
+router.get("/me", authMiddleware, authController.me);
 export default router;
