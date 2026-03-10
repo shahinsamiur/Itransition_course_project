@@ -4,17 +4,7 @@ import jwt from "jsonwebtoken";
 import { sql } from "../../config/db";
 import AppError from "../../shared/utils/AppError";
 import sendResponse from "../../shared/utils/response";
-
-interface JwtPayload {
-  id: number;
-  role: string;
-}
-interface user {
-  id: number;
-  name: string;
-  email: string;
-  role: string;
-}
+import { JwtPayload } from "./authTypes";
 export const register = async (
   req: Request,
   res: Response,

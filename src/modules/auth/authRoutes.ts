@@ -16,8 +16,6 @@ router.post(
   authController.register,
 );
 
-// router.post("/signin", validate(loginSchema), authController.login);
-
 router.get(
   "/me",
   authMiddleware,
