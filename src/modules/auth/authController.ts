@@ -1,7 +1,7 @@
 import { Request, Response, NextFunction } from "express";
 import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
-import { sql } from "../../config/supabase_db";
+import { sql } from "../../config/db";
 import AppError from "../../shared/utils/AppError";
 import sendResponse from "../../shared/utils/response";
 

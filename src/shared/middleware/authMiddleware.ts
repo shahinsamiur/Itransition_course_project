@@ -1,6 +1,6 @@
 import { Request, Response, NextFunction } from "express";
 import jwt, { JwtPayload } from "jsonwebtoken";
-import { sql } from "../../config/supabase_db";
+import { sql } from "../../config/db";
 import AppError from "../utils/AppError";
 
 interface DecodedToken extends JwtPayload {
